@@ -15,7 +15,7 @@ set nu
 set nowrap
 set noswapfile
 set nobackup
-set undodir=C:\Users\mateusz.janik\AppData\Local\nvim\undodir
+set undodir=~/.temp/nvim/undodir
 set undofile
 set incsearch
 set termguicolors
@@ -82,9 +82,9 @@ nnoremap <leader>pe :e#<CR>
 " open explorer 
 nnoremap <leader>ex :Explore<CR>
 " open .vim file
-nnoremap <Leader>vim :e ~/.temp/nvim/undodir<CR>
+nnoremap <Leader>vim :e ~/.config/nvim/init.vim<CR>
 " source .vim file
-nnoremap <leader>svi :so ~/.temp/nvim/undodir<CR>
+nnoremap <leader>svi :so ~/.config/nvim/init.vim<CR>
 
 "c++ langauge settings
 " https://github.com/neoclide/coc.nvim#example-vim-configuration
