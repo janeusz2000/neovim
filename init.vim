@@ -65,6 +65,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'npm install --frozen-lock
 " opening and closing brackets
 Plug 'jiangmiao/auto-pairs'
 
+" harpoon stuff
+Plug 'ThePrimeagen/harpoon'
+
 "cpp
 call plug#end()
 
@@ -151,6 +154,19 @@ vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
 
 " insert stuff into quotes
-nnoremap <Leader>" ciw""<Esc>P
-nnoremap <Leader>' ciw''<Esc>P
-nnoremap <Leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>P
+nnoremap <Leader>" ciw""<Esc>
+nnoremap <Leader>' ciw''<Esc>
+nnoremap <Leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>
+
+" haroon shortcuts
+nnoremap <Leader>ha :lua require("harpoon.mark").add_file()<CR>
+nnoremap <Leader>ht :lua require("harpoon.ui").toggle_quick_menu()<CR>
+nnoremap <Leader>hn :lua require("harpoon.ui").nav_next()<CR>
+nnoremap <Leader>hb :lua require("harpoon.ui").nav_prev()<CR>
+
+" harpoon absolute files
+nnoremap <Leader>h1 :lua require("harpoon.ui").nav_file(1)<CR>
+nnoremap <Leader>h2 :lua require("harpoon.ui").nav_file(2)<CR>
+nnoremap <Leader>h3 :lua require("harpoon.ui").nav_file(3)<CR>
+nnoremap <Leader>h4 :lua require("harpoon.ui").nav_file(4)<CR>
+nnoremap <Leader>h5 :lua require("harpoon.ui").nav_file(5)<CR>
